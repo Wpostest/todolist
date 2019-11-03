@@ -11,7 +11,6 @@
 </head>
 <body>
     <header class="todolist__header">
-        <div class="todolist__clock">20:14 02.11.2019</div>
         <h1 class="todolist__title">todolist</h1>
     </header>
     <section>
@@ -25,14 +24,24 @@
         </label>
         
         <ul class="todolist">
+            <div class="todolist__information">
+                <div class="todolist__current-time">Niedziala 11 Listopada</div>
+                <div class="todolist__task-done-info">
+                    <span class="todolist__count-done-task">1</span>
+                    z
+                    <span class="todolist__count-all-task">2</span>
+                    zadań ukończono
+                </div>
+                <div class="todolist__line-done-percentage"></div>
+            </div>
             <li class="todolist__task">
                 <input type="checkbox" class="todolist__checkbox-done">
-                Zrób zakupy
+                <span>Zrób zakupy</span>
                 <input type="checkbox" class="todolist__checkbox-star">
             </li>
             <li class="todolist__task">
                     <input type="checkbox" class="todolist__checkbox-done">
-                    Ksiazka
+                    <span>Ksiazka</span>
                     <input type="checkbox" class="todolist__checkbox-star">
                 </li>
             <!--<li>TEXT<input type="checkbox"><button>star-icon</button></li>-->
@@ -42,11 +51,11 @@
                 CHECKBOX MA POKAZYWAC SIE Z LEWEJ STRONY
             -->
         </ul>
-        <button class="todolist__show-more">Pokaż więcej</button>
-        <button class="todolist__done">Zrobione !</button>
+        <button class="todolist__show-more" title="Pokaż więcej zadań">Pokaz wiecej</button>
+        <button class="todolist__done" title="Usuń skończone zadania z listy">Zrobione !</button>
     </section>
     <footer>
-        <h6>Powered by Filip Kwiatkowski</h6>
+        <h6 class="todolist__copywrite">Powered by Filip Kwiatkowski</h6>
     </footer>
     <script src="js/app.js"></script>
 </body>
