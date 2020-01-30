@@ -1,3 +1,7 @@
 1. Zamienić animacje background`u, aby wykonywała się na label`u, który bedzie się znajdował w "todolist__task" i zakrywał cały obszar tego elementu. Dzięki temu uzytkownik bez problemu będzie mogł zaznaczyć zakończone zadanie nie muszać klikać na checkbox, zamienimy 2 elementy(div i span) na 1(label) prez co kod będzie zajmował mniej linijek.
 
-2.Dodaj box-shadow do wykresu pokazującego ile zadań jest już ukończonych aby był bardziej widoczny.  
+2.Dodaj box-shadow do wykresu pokazującego ile zadań jest już ukończonych aby był bardziej widoczny.
+
+3. Usunać .history z gita  (x)
+
+4.Pomyslec jak ostylowac przyciski aby jeszcze lepiej wygladaly 

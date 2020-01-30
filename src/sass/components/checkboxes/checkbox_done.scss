@@ -33,7 +33,7 @@
         border: none;
         background-color: $background_primary;
 
-        & ~ span{
+        & ~ .todolist__task-text{
             text-decoration: line-through;
             color: $font-color_primary;
         }
