@@ -15,17 +15,19 @@
     </header>
     <section class="todolist__wrapper">
         <form action="" class="todolist__form-search">
-            <label class="todolist__search-wrapper" for="todolist__search">
+            <div class="todolist__search-wrapper">
                 <i class="fas fa-search todolist__search-icon"></i>
                 <input type="text" class="todolist__search" id="todolist__search" title="Szukaj" placeholder="Wyszukaj zadania z listy" autocomplete="off" spellcheck="false">
-            </label>
+                <label class="todolist__search-label" for="todolist__search"></label>
+            </div>
         </form>
 
         <form action="" class="todolist__form-add-task">
-            <label class="todolist__add-task-wrapper" for="todolist__add-task">
+            <div class="todolist__add-task-wrapper">
                 <input type="text" class="todolist__add-task" id="todolist__add-task" title="Dodaj zadanie" placeholder="Dodaj zadanie" autocomplete="off" spellcheck="false">
                 <i class="fas fa-plus todolist__add-task-icon"></i>
-            </label>
+                <label class="todolist__add-task-label" for="todolist__add-task"></label>
+            </div>
         </form>
 
         <ul class="todolist">
@@ -65,11 +67,33 @@
             -->
         </ul>
         <button class="todolist__show-more" title="Pokaż więcej zadań">Pokaz wiecej</button>
-        <button class="todolist__done" title="Usuń skończone zadania z listy">Zrobione !</button>
+        <button class="todolist__done" title="Usuń skończone zadania z listy">
+                <span class="todolist__done-left-biceps">💪</span>
+                <span class="todolist__done-text">Zrobione</span>
+                <span class="todolist__done-right-biceps">💪</span>
+        </button>
     </section>
-    <footer>
+    <footer class="todolist__footer">
         <h6 class="todolist__copywrite">Powered by <a href="https://github.com/Wpostest/">Wpostest</a></h6>
     </footer>
+
+    <ul class="bg-animation">
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+        <li class="bg-animation__square"></li>
+    </ul>
     <script src="js/app.js"></script>
 </body>
 </html>

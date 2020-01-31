@@ -17,7 +17,7 @@ function formatDate(date) {
   
     const day = date.getDate();
     const monthIndex = date.getMonth();
-    const dayIndex = date.getDay();
+    const dayIndex = date.getDay() - 1;
   
     return  dayNames[dayIndex] + " " + day + " " + monthNames[monthIndex];
 }

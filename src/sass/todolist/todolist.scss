@@ -1,7 +1,5 @@
 body{
-    background: rgb(148,219,173);
-    background: linear-gradient(120deg, rgba(148,219,173,1) 34%, rgba(248,226,166,1) 94%);
-    height: 100vh;
+    margin-bottom: 150px;
 }
 
 .todolist__header{
@@ -45,7 +43,8 @@ body{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
+    position: relative;
 
     &:hover{
         //box-shadow: 0 1px 2px 0 rgba(32,33,36,0.28);
@@ -79,6 +78,15 @@ body{
             }
         }
     }
+
+    .todolist__search-label{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 50px;
+    }
 }
 
 .todolist__add-task-wrapper{
@@ -90,7 +98,8 @@ body{
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    position: relative;
 
     .todolist__add-task-icon{
         color: $font-color_primary;
@@ -127,7 +136,20 @@ body{
                 transition: transform .7s;
                 transform: rotate(360deg);
             }
+
+            & ~ .todolist__add-task-label{
+
+            }
         }
+    }
+
+    .todolist__add-task-label{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 8px;
     }
 }
 
@@ -138,6 +160,10 @@ body{
     border: 1px solid #ebebeb;
     margin-bottom: 10px;
     padding-bottom: 21px;
+    max-height: 455px;
+    overflow: hidden;
+    //transition: max-height 1s linear;
+    
 
     .todolist__information{
         width: 90%;
@@ -165,11 +191,10 @@ body{
 
         .todolist__line-done-percentage{
             width: 100%;
-            height: 2px;
+            height: 4px;
             background: linear-gradient(to right, $background_primary 0%, $background_primary 0%, #dadada 0%, #dadada 100%);
             //background: linear-gradient(to right, #68d391 0%, #68d391 33%, #dadada 33%, #dadada 100%);
             margin-top: 10px;
-            box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
         }
     }
 
@@ -200,6 +225,10 @@ body{
             z-index: 1;
             transition: color 200ms ease-in;            
         }
+
+        &:nth-child(11){
+            border: none;
+        }
     }
 }
 
@@ -217,23 +246,17 @@ body{
     margin-bottom: 15px;
 }
 
-.todolist__done{
-    background-color: $background_primary;
-    border: none;
-    border-radius: 25px;
-    width: 20%;
-    height: 50px;
-    color: $font-color_primary;
-    font-size: $font-size_l;
-    font-family: $font-family_primary;
-    cursor: pointer;
-    transition: transform .5s;
+.todolist__footer{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0px;
 }
 
 .todolist__copywrite{
     font-size: $font-size_xs;
     color: $font-color_primary;
-    position: absolute;
+    position: fixed;
     left: 50%;
     bottom: 5px;
     transform: translateX(-50%);
@@ -243,8 +266,6 @@ body{
         color: $font-color_secoundary;  
     }
 }
-
-
 
 
 
