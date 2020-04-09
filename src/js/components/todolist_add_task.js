@@ -5,9 +5,14 @@ const createTask = (inputValue) =>{
     const task = document.createElement('li');
     task.className = "todolist__task";
 
+    const label = document.createElement('label');
+    label.htmlFor = "task-" + (taskCount() + 1);
+    label.className = "todolist_task-label";
+
     const checkboxDone = document.createElement('input');
     checkboxDone.type = "checkbox";
     checkboxDone.className = "todolist__checkbox-done";
+    checkboxDone.id = "task-" + (taskCount() + 1);
     checkboxDone.addEventListener("change", checboxChangeEvent);
 
     const taskText = document.createElement('span');
@@ -21,6 +26,7 @@ const createTask = (inputValue) =>{
     const backgroundAnimation = document.createElement('div');
     backgroundAnimation.className = "checbox-done_background_animation";
 
+    task.appendChild(label);
     task.appendChild(checkboxDone);
     task.appendChild(taskText);
     task.appendChild(checkboxStar);
