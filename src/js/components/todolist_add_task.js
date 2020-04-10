@@ -40,9 +40,11 @@ const addTask = () =>{
     const input = event.target.querySelector('.todolist__add-task');
     if(input.value === ""){ return; };
     const task = createTask(input.value);
-    todoList.appendChild(task);
+    //todoList.appendChild(task);
     input.value = "";
     chartRefresh();
+    addToCurrentTasks(task);
+    reloadTasks();
 };
 
 formAddTask.addEventListener('submit', addTask);
