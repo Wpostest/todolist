@@ -32,14 +32,14 @@
         width: 10px;
         background: rgba($background_primary, .2);
         border-radius: 50%;
-        transition: transform .5s;
+        transition: transform 1s;
     }
 
 
     &:hover{
         
         &::after{
-            transform: scale3d(30,30,30);
+            transform: scale3d(60,60,60);
         }
 
         .todolist__done-text::before{

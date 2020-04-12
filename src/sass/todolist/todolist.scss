@@ -238,6 +238,19 @@ body{
         z-index: 1;
         cursor: pointer;
     }
+
+    .todolist__checkbox-done:checked ~ .todolist__task-text{
+
+    }
+
+    .todolist__checkbox-done ~ .todolist__task-text{
+        .text-active{
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background-color: $background_primary;
+        }
+    }
 }
 
 .todolist__show-more{

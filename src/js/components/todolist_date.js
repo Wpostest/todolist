@@ -2,10 +2,10 @@ const dateDisplay = document.querySelector('.todolist__current-time');
 
 function formatDate(date) {
     const dayNames = [
+        "Niedziela",
         "Poniedziałek", "Wtorek",
         "Środa", "Czwartek",
-        "Piątek", "Sobota",
-        "Niedziela"
+        "Piątek", "Sobota"
     ];
 
     const monthNames = [
@@ -17,7 +17,7 @@ function formatDate(date) {
   
     const day = date.getDate();
     const monthIndex = date.getMonth();
-    const dayIndex = date.getDay() - 1;
+    const dayIndex = date.getDay();
   
     return  dayNames[dayIndex] + " " + day + " " + monthNames[monthIndex];
 }
