@@ -13,7 +13,6 @@ const createTask = (inputValue) =>{
     checkboxDone.type = "checkbox";
     checkboxDone.className = "todolist__checkbox-done";
     checkboxDone.id = "task-" + (taskCount() + 1);
-    checkboxDone.addEventListener("change", checboxChangeEvent);
 
     const taskText = document.createElement('span');
     taskText.className = "todolist__task-text";
@@ -37,6 +36,7 @@ const createTask = (inputValue) =>{
 
 const addTask = () =>{
     event.preventDefault();
+    event.stopPropagation();
     const input = event.target.querySelector('.todolist__add-task');
     if(input.value === ""){ return; };
     const task = createTask(input.value);
@@ -45,6 +45,7 @@ const addTask = () =>{
     chartRefresh();
     addToCurrentTasks(task);
     reloadTasks();
+    loadCheckboxEvent();
 };
 
 formAddTask.addEventListener('submit', addTask);

@@ -8,3 +8,6 @@
 5. Po usukieniu jakis zadan napisz na przucisku wlasnie usunoles iles zadan
 6.zajac sie przyciskiem do pokazywania wiecej
 7.gladka animacja rozwijania listy
+
+
+Zapamietywac zmiane waznych zadan <==========================

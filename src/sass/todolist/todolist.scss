@@ -239,16 +239,23 @@ body{
         cursor: pointer;
     }
 
-    .todolist__checkbox-done:checked ~ .todolist__task-text{
+    .text-active{
+        display: inline-block;
+        background-color: $background_secoundary;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        padding: 3px;
+    }
 
+    .todolist__checkbox-done:checked ~ .todolist__task-text{
+        .text-active{
+            text-decoration: line-through;
+        }
     }
 
     .todolist__checkbox-done ~ .todolist__task-text{
         .text-active{
-            display: inline-block;
-            width: 5px;
-            height: 5px;
-            background-color: $background_primary;
+            text-decoration: unset;
         }
     }
 }

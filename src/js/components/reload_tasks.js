@@ -10,4 +10,6 @@ const reloadTasks = function(){
     currentTasks.forEach(function(item){
         todolist.appendChild(item.cloneNode(true));
     });
+
+    loadCheckboxEvent();
 }

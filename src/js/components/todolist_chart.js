@@ -3,11 +3,11 @@ const taskDoneNumerDisplay = document.querySelector('.todolist__count-done-task'
 const allTaskNumberDisplay = document.querySelector('.todolist__count-all-task');
 
 const chartRefresh = () => {
-    const taskCount = document.querySelectorAll('.todolist__task').length;
-    const taskDoneCount = document.querySelectorAll('.todolist__checkbox-done:checked').length;
-    const taskDonePercentage =  taskDoneCount / taskCount * 100;
-    taskDoneNumerDisplay.textContent = taskDoneCount;
-    allTaskNumberDisplay.textContent = taskCount;
+    const task = taskCount();
+    const taskDone = taskDoneCount();
+    const taskDonePercentage =  taskDone / task * 100;
+    taskDoneNumerDisplay.textContent = taskDone;
+    allTaskNumberDisplay.textContent = task;
 
     if(taskCount <= 0){
         chart.style.background = `linear-gradient(to right, #68d391 0%, #68d391 0%, #dadada 0%, #dadada 100%)`;

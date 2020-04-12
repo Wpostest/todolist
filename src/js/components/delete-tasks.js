@@ -12,7 +12,7 @@ const deleteTasks = () =>{
         chartRefresh();
         realoadTags();
         reloadTasks();
-
+        loadCheckboxEvent();
     }
 }
 

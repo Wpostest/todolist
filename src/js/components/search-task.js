@@ -1,5 +1,4 @@
 const input = document.querySelector(".todolist__search");
-let filtredTasks = [];
 
 const searchingTask = function(event){
     const inputText = this.value.toLowerCase();
@@ -14,7 +13,7 @@ const searchingTask = function(event){
             todolist.removeChild(todolist.lastElementChild);
         }
 
-        filtredTasks = currentTasks.map(function(item){
+        let filtredTasks = currentTasks.map(function(item){
             return item.cloneNode(true);
         });
 
@@ -40,11 +39,21 @@ const searchingTask = function(event){
                     }
                 }
 
-                taskTextElement.textContent = taskTextHtml;
+                taskTextElement.innerHTML = taskTextHtml;
                 todolist.appendChild(item);
             });
         }
+
+        loadCheckboxEvent();
     }
 }
 
 input.addEventListener("input", searchingTask);
+
+input.addEventListener("keydown", function(e){
+    if(e.keyCode == 13){
+        e.preventDefault();
+        e.stopPropagation();
+    }
+});
+
